@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   //ROOT_URL: 'https://notes-nodejsapi.herokuapp.com'
-  ROOT_URL: 'http://localhost:4000'
+  ROOT_URL: 'https://cute-long-johns-cow.cyclic.app',
 };
 
 /*
