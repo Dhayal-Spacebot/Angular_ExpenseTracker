@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "notes": {
+    "Angular_ExpenseTracker": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "notes:build:production"
+              "browserTarget": "Angular_ExpenseTracker:build:production"
             },
             "development": {
-              "browserTarget": "notes:build:development"
+              "browserTarget": "Angular_ExpenseTracker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "notes:build"
+            "browserTarget": "Angular_ExpenseTracker:build"
           }
         },
         "test": {
@@ -98,5 +98,5 @@
       }
     }
   },
-  "defaultProject": "notes"
+  "defaultProject": "Angular_ExpenseTracker"
 }
