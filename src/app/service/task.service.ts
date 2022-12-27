@@ -5,17 +5,17 @@ import { Task } from '../models/task.model';
 import { WebRequestService } from './web-request.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TaskService {
-
-  constructor(private webRequestService: WebRequestService) { }
+  constructor(private webRequestService: WebRequestService) {}
 
   getLists(): Observable<List[]> {
     return this.webRequestService.getLists(`lists`);
   }
 
   createList(title: string): Observable<List> {
+    debugger;
     return this.webRequestService.postList(`lists`, { title });
   }
 
@@ -28,9 +28,11 @@ export class TaskService {
   }
 
   complete(task: Task): Observable<Task> {
-    return this.webRequestService.patchTask(`lists/${task._listId}/tasks/${task._id}`, {
-      completed: !task.completed
-    });
+    return this.webRequestService.patchTask(
+      `lists/${task._listId}/tasks/${task._id}`,
+      {
+        completed: !task.completed,
+      }
+    );
   }
-
 }
